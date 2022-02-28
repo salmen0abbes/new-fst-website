@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to FST</title>
+    <link rel="stylesheet" href="homestyle.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="images/logo_fst_tunisie.jpg" alt="fstlogo" class="icon" />
+        <div class="logo_name">Faculty of Science Tunis</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="bx bxs-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Profile</span>
+          </a>
+          <span class="tooltip">Profile</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <span class="tooltip">Messages</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-spreadsheet"></i>
+            <span class="links_name">Marks</span>
+          </a>
+          <span class="tooltip">Marks</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-task"></i>
+            <span class="links_name">Tasks and Homework</span>
+          </a>
+          <span class="tooltip">Tasks and Homework</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-book"></i>
+            <span class="links_name">Courses</span>
+          </a>
+          <span class="tooltip">Courses</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-time"></i>
+            <span class="links_name">Schedule</span>
+          </a>
+          <span class="tooltip">Schedule</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-map-pin"></i>
+            <span class="links_name">Map</span>
+          </a>
+          <span class="tooltip">Map</span>
+        </li>
+
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name">Flen</div>
+              <div class="job">Fouleni</div>
+            </div>
+          </div>
+          <a href="main.html">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div class="text">Welcome</div>
+    </section>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+
+      searchBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+    </script>
+  </body>
+</html>
